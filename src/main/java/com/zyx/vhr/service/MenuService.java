@@ -23,10 +23,12 @@ public class MenuService {
     MenuMapper menuMapper;
     @Autowired
     MenuRoleMapper menuRoleMapper;
+
     public List<Menu> getMenusByHrId() {
         return menuMapper.getMenusById(((Hr) SecurityContextHolder.getContext().getAuthentication().getPrincipal()).getId());
     }
-//    @Cacheable
+
+    //    @Cacheable
     public List<Menu> getAllMenuWithRole() {
         return menuMapper.getAllMenuWithRole();
     }
@@ -42,6 +44,7 @@ public class MenuService {
     @Transactional
     public boolean updateMenuRole(Integer rid, Integer[] mids) {
         menuRoleMapper.deleteByRid(rid);
+        if (mids == null || mids.length == 0) return true;
         Integer result = menuRoleMapper.insertRecord(rid, mids);
         return result == mids.length;
     }
