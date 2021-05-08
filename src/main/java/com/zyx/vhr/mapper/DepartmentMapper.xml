@@ -16,6 +16,11 @@
     <sql id="Base_Column_List">
         id, name, parentId, depPath, enabled, isParent
     </sql>
+    <select id="getAllDepartmentsWithoutChildren" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from department
+    </select>
     <select id="addDep" statementType="CALLABLE">
         call addDep(#{name, mode=IN, jdbcType=VARCHAR}, #{parentId, mode=IN, jdbcType=INTEGER},
                     #{enabled,mode=IN,jdbcType=BOOLEAN}, #{result,mode=OUT,jdbcType=INTEGER},

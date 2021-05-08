@@ -73,6 +73,46 @@ public class Employee {
         return nation;
     }
 
+    @Override
+    public String toString() {
+        final StringBuffer sb = new StringBuffer("Employee{");
+        sb.append("id=").append(id);
+        sb.append(", name='").append(name).append('\'');
+        sb.append(", gender='").append(gender).append('\'');
+        sb.append(", birthday=").append(birthday);
+        sb.append(", idCard='").append(idCard).append('\'');
+        sb.append(", wedlock='").append(wedlock).append('\'');
+        sb.append(", nationId=").append(nationId);
+        sb.append(", nativePlace='").append(nativePlace).append('\'');
+        sb.append(", politicId=").append(politicId);
+        sb.append(", email='").append(email).append('\'');
+        sb.append(", phone='").append(phone).append('\'');
+        sb.append(", address='").append(address).append('\'');
+        sb.append(", departmentId=").append(departmentId);
+        sb.append(", jobLevelId=").append(jobLevelId);
+        sb.append(", posId=").append(posId);
+        sb.append(", engageForm='").append(engageForm).append('\'');
+        sb.append(", tiptopDegree='").append(tiptopDegree).append('\'');
+        sb.append(", specialty='").append(specialty).append('\'');
+        sb.append(", school='").append(school).append('\'');
+        sb.append(", beginDate=").append(beginDate);
+        sb.append(", workState='").append(workState).append('\'');
+        sb.append(", workId='").append(workId).append('\'');
+        sb.append(", contractTerm=").append(contractTerm);
+        sb.append(", conversionTime=").append(conversionTime);
+        sb.append(", notWorkDate=").append(notWorkDate);
+        sb.append(", beginContract=").append(beginContract);
+        sb.append(", endContract=").append(endContract);
+        sb.append(", workAge=").append(workAge);
+        sb.append(", nation=").append(nation);
+        sb.append(", politicsstatus=").append(politicsstatus);
+        sb.append(", department=").append(department);
+        sb.append(", jobLevel=").append(jobLevel);
+        sb.append(", position=").append(position);
+        sb.append('}');
+        return sb.toString();
+    }
+
     public void setNation(Nation nation) {
         this.nation = nation;
     }
